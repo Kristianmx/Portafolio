@@ -1,0 +1,220 @@
+/* General */
+*{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html {
+ box-sizing: border-box;
+  text-align: center;
+  background-image: url(../Multimedia/intro.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+  
+}
+
+body{
+font-size: 16px;
+height: 100%;
+width: 100%;
+}
+
+/* Intro */
+.intro{
+position: absolute;
+top: 0;
+width: 100%;
+height: 100%;
+display: block;
+background-color: white;
+
+}
+
+@keyframes intro{
+  0%{
+    width: 100%;
+  }
+  100%{
+    width: 0%;
+    display: none;
+  }
+}
+@keyframes introP{
+  0%{
+    width: 0%;
+    height: 0%;
+  }
+  100%{
+    width: 48.4%;
+    display: block;
+  }
+}
+
+/* Principal */
+
+
+#nav{
+  background-color: rgb(27, 35, 64);
+  width: 100%;
+  height: 12.6%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+@keyframes h1N {
+  0%{
+    font-size: 0vw;
+    
+  }
+  100%{
+    font-size: 1.5vw;
+  }
+}
+#nav h1{
+  margin-left: 2%;
+  font-size: 1.5vw;
+}
+@keyframes zoom{
+  0%{
+    width:48.4%;
+  height: 57%;
+    top: 4.44%;
+    left: 24.8%;
+  }
+  100%{
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+  }
+}
+.Frame-primary{
+  
+  background-image: url(../Multimedia/fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+position: relative;
+top: 4.44%;
+left: 24.8%;
+width:48.4%;
+height: 57%;
+}
+
+
+.inicio{
+  
+  height: 87.4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.content-banner{
+  background-color: #1e2326;
+  height: 100%;
+  width: 34%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  
+}
+.text-banner{
+  height: 30%;
+
+  width: 90%;
+}
+  @keyframes h1T {
+    0%{
+      font-size: 0vw;
+      
+    }
+    100%{
+      font-size: 2vw;
+    }
+  }
+  @keyframes h2T {
+    0%{
+      font-size: 0vw;
+    }
+    100%{
+      font-size: 1.3vw;
+    }
+  }
+  @keyframes h1TV {
+    0%{
+      font-size: 2vw;
+      
+    }
+    100%{
+      font-size: 3vw;
+    }
+  }
+  @keyframes h2TV {
+    0%{
+      font-size: 1.3vw;
+    }
+    100%{
+      font-size: 2vw;
+    }
+  }
+.text-banner h1 {
+  font-size: 2vw;
+}
+.text-banner h2 {
+  font-size: 1.3vw;
+}
+.h2T{
+  margin-bottom: 1rem;
+}
+
+.content-r{
+  height: 100%;
+  width: 33%;
+  background-color: rgba(5, 5, 5, 0.654);
+}
+.content-l{
+  height: 100%;
+  width: 33%;
+  background-color: rgba(95, 100, 104, 0.334);
+}
+.content-img{
+  margin-top: 5%;
+
+  border-radius:  5rem;
+  width: 40%;
+  height: 30%;
+}
+.content-img img{
+  border-radius:  5rem;
+  width: 100%;
+  height: 100%;
+}
+.redes{
+
+  display: flex;
+  gap: 0.4rem;
+  width: 86%;
+  height: 20%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
+}
+.fa-brands{
+  width: 80%;
+  height: 50%;
+  border: black 2px solid;
+}
