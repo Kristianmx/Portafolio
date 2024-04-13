@@ -8,11 +8,7 @@
 html {
  box-sizing: border-box;
   text-align: center;
-  background-image: url(../Multimedia/intro.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+  
   height: 100%;
   max-width: 100%;
   font-size: 62.5%;
@@ -23,6 +19,11 @@ body{
 font-size: 16px;
 height: 100%;
 width: 100%;
+background-image: url(../Multimedia/intro.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 /* Intro */
