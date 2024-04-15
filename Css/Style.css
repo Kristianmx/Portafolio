@@ -113,16 +113,7 @@ height: 57%;
   margin-bottom: 1rem;
 }
 
-.content-r{
-  height: 100%;
-  width: 33%;
-  backdrop-filter: blur(8px)
-}
-.content-l{
-  height: 100%;
-  width: 33%;
-  backdrop-filter: blur(8px)
-}
+
 .content-img{
   margin-top: 5%;
 
@@ -156,3 +147,123 @@ height: 57%;
   transform: scale(1.2);
 }
 /* --- contenedores --- */
+.content-r{
+  height: 100%;
+  width: 33%;
+  backdrop-filter: blur(8px);
+  display: flex;
+}
+.content-l{
+  height: 100%;
+  width: 33%;
+  backdrop-filter: blur(8px);
+  display: flex;
+}
+.RCon{
+width: 90%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.LCon{
+width: 90%;
+height: 100%;
+
+}
+#Lc{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.textTrans{
+  color: rgba(0, 0, 0, 0.564);
+  background-color: rgba(250, 235, 215, 0.119);
+  border-radius: 2.5rem;
+  padding: 7px 8px 5px;
+  border: 1px solid white;
+  font-size: 3rem;
+  display: block;
+}
+
+.textTrans:hover{
+  transform: scale(1.05);
+  color: black;
+  cursor: pointer ;
+
+}
+.ctn-btn{
+  width:10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnLateral{
+  width:100% ;
+  height: 20% ;
+  background-color: transparent;
+  border: 0;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+ 
+  border-radius: 4rem;
+}
+.btnLateral img:hover{
+  border: rgb(244, 77, 17) solid 1.5px;
+  transform: scale(1.14);
+  width: 3.4rem ;
+  height: 3.4rem;
+  background-color: rgba(255, 111, 0, 0.615);
+  cursor: pointer ;
+}
+.btnLateral img{
+ width: 4rem ;
+ height: 4rem;
+ border: rgb(181, 179, 179) solid 2px;
+ border-radius: 6rem;
+ background-color: rgb(181, 179, 179);
+ 
+}
+#btnr{
+display: none;
+}
+#btnl{
+display: none;
+}
+
+.conLeft{
+  border: solid 2px red;
+  width: 90%;
+  height: 90%;
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.conRight{
+
+  width: 90%;
+  height: 90%;
+  display: none;
+  gap: .9rem;
+  flex-direction: column;
+ 
+}
+.conCard1, .conCard2,.conCard3{
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+  height: 30%;
+}
+.card{
+  border: 2px solid green;
+  background-color: rgba(250, 235, 215, 0.208);
+  width: 28%;
+  height: 100%;
+  border-radius: 3rem;
+}
