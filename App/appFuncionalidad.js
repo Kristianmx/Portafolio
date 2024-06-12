@@ -22,12 +22,12 @@ RCon.addEventListener("click",()=>{
   contentRight.style.animation="contentContract 1s ease-out";
   LC.style.display="none";
   btnr.style.display="block";
- txtr.style.display="none";
- conRight.style.display="flex";
+  txtr.style.display="none";
+  conRight.style.display="flex";
   setTimeout(()=>{
-    contentRight.style.width="0%";
-    contentLeft.style.width="66%";
-    contentRight.style.display="none";
+  contentRight.style.width="0%";
+  contentLeft.style.width="66%";
+  contentRight.style.display="none";
   },1001);
 });
 btnr.addEventListener("click",()=>{
@@ -38,10 +38,10 @@ btnr.addEventListener("click",()=>{
   btnr.style.display="none";
   conRight.style.display="none";
   //setTimeout(()=>{
-    contentRight.style.width="33%";
-    contentLeft.style.width="33%";
-    contentRight.style.display="flex";
-    txtr.style.display="block";
+  contentRight.style.width="33%";
+  contentLeft.style.width="33%";
+  contentRight.style.display="flex";
+  txtr.style.display="block";
 
  // },1000);
 });
@@ -55,9 +55,9 @@ LCon.addEventListener("click",()=>{
   btnl.style.display="block";
   conLeft.style.display="flex";
   setTimeout(()=>{
-    contentLeft.style.width="0%";
-    contentRight.style.width="66%";
-    contentLeft.style.display="none";
+  contentLeft.style.width="0%";
+  contentRight.style.width="66%";
+  contentLeft.style.display="none";
   
   },1001);
 });
@@ -68,10 +68,10 @@ btnl.addEventListener("click",()=>{
   btnl.style.display="none";
   conLeft.style.display="none";
  // setTimeout(()=>{
-    contentLeft.style.width="33%";
-    contentRight.style.width="33%";
-    contentLeft.style.display="flex";
-    txtl.style.display="block";
+  contentLeft.style.width="33%";
+  contentRight.style.width="33%";
+  contentLeft.style.display="flex";
+  txtl.style.display="block";
 
  // },1000);
 });

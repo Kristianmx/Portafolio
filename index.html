@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Kristopher</title>
   <!-- Style Links -->
-  <link rel="stylesheet" href="Css/Style.css">
   <link rel="stylesheet" href="Css/Animaciones.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/css/stylesheet.css">
+  <link rel="stylesheet" href="Css/styleCarrusel.css">
+  <link rel="stylesheet" href="Css/Style.css">
   <!-- JavaScript -->
+  <script type="text/javascript" src="https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/js/libs.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script defer src="App/funcionalidadCarrusel.js" ></script>
   <script defer src="App/appEntrada.js"></script>
   <script defer src="App/appFuncionalidad.js"></script>
 </head>
@@ -25,8 +31,8 @@
           <h1 class="textTrans" id="txtl">Ver <br> Perfil</h1>
           <div class="conLeft" id="conLeft">
                 <div class="miniNav">
-                  <button class="btnOption">perfil</button>
-                  <button class="btnOption">contacto</button>
+                  <button class="btnOption" id="btnprofile">perfil</button>
+                  <button class="btnOption" id="btnContacto">contacto</button>
                   <button class="btnOption">Info</button>
                 </div>
                 <div class="conteL">
@@ -66,20 +72,17 @@
       <div class="RCon" id="RCon">
         <h1 class="textTrans" id="txtr"> Ver <br> Proyectos</h1>
         <div class="conRight" id="conRight">
-          <div class="conCard1">
-            <div class="card"> </div>
-            <div class="card"> </div>
-            <div class="card"> </div>
-          </div>
-          <div class="conCard2">    
-            <div class="card"> </div>
-            <div class="card"> </div>
-            <div class="card"> </div>
-          </div>
-          <div class="conCard3">
-            <div class="card"> </div>
-            <div class="card"> </div>
-            <div class="card"> </div>
+          <div id="contentContainer" class="trans3d"> 
+            <section id="carouselContainer" class="trans3d">
+              <a href="#" id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d">1</div></a>
+              <figure id="item2" class="carouselItem trans3d"><div class="carouselItemInner trans3d">2</div></figure>
+              <a href="#" id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d">1</div></a>
+              <a href="#" id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d">1</div></a>
+              <a href="#" id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d">1</div></a>
+
+            </section>
+            </div>
+            
          </div>
         </div>
       </div>
