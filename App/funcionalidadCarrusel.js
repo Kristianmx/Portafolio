@@ -6,6 +6,7 @@ var mouseY = 0;
 var mouseZ = 0;
 var addX = 0;
 
+const mar = document.getElementById('conRight');
 
 // fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
 // no need to create my own :)
@@ -46,7 +47,7 @@ function init()
   fps = $('#fps');
   rY = 360 / itemLength;
   radius = Math.round( (250) / Math.tan( Math.PI / itemLength ) );
-  
+
   // set container 3d props
   TweenMax.set(container, {perspective:600})
   TweenMax.set(carousel, {z:-(radius)})
@@ -63,9 +64,10 @@ function init()
     
     animateIn( $item, $block )            
   }
-  
+ 
+
   // set mouse x and y props and looper ticker
-  window.addEventListener( "mousemove", onMouseMove, false );
+  mar.addEventListener( "mousemove", onMouseMove, false );
   ticker = setInterval( looper, 2000/20 );      
 }
 
@@ -91,7 +93,7 @@ function onMouseMove(event)
 {
   mouseX = -(-(window.innerWidth * .2) + event.pageX) * .0025;
   mouseY = -(-(window.innerHeight * .2) + event.pageY ) * .01;
-  mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
+  mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 100);
 }
 
 // loops and sets the carousel 3d properties
@@ -101,6 +103,18 @@ function looper()
   TweenMax.to( carousel, 1, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
   TweenMax.set( carousel, {z:mouseZ } )
   fps.text( 'Framerate: ' + counter.tick() + '/60 FPS' )  
+  const cass = document.querySelectorAll(".carouselItem")
+
+cass.forEach(item => {
+  item.addEventListener("mouseover", () => {
+    TweenMax.to( carousel, 400000, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
+    console.log("entro");
+  })
+  item.addEventListener("mouseout", () => {
+    TweenMax.to( carousel, 1, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
+    console.log("salio");
+  })
+})
 }
 
 function getRandomInt( $n )
@@ -110,3 +124,5 @@ function getRandomInt( $n )
 
 
 
+
+  

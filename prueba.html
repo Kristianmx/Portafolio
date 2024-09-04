@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel Dinámico</title>
+<style>
+  .carrusel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .carrusel-opciones {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio entre opciones y carrusel */
+  }
+  .carrusel-opciones button {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+  }
+  .carrusel-imagenes {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  .carrusel-imagenes img {
+    max-width: 100%;
+    display: block;
+  }
+  .info {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="carrusel-container">
+  <div class="carrusel-opciones">
+    <!-- Botones generados dinámicamente -->
+  </div>
+  <div class="info">
+    <!-- Información de la imagen con scroll-x -->
+  </div>
+  <div class="carrusel-imagenes">
+    <!-- Imágenes generadas dinámicamente -->
+  </div>
+</div>
+
+<script>
+// Datos de ejemplo
+const imagenes = [
+  { src: 'Multimedia/fondo.png', info: 'Información de la imagen 1',Option:"uno" },
+  { src: 'Multimedia/intro.png', info: 'Información de la imagen 2',Option:"dos" },
+  { src: 'Multimedia/intro.png', info: 'Información de la imagen 2',Option:"tres" },
+  { src: 'Multimedia/intro.png', info: 'Información de la imagen 2',Option:"cuatro" },
+  { src: 'Multimedia/intro.png', info: 'Información de la imagen 2',Option:"cinco" },
+
+  // Agrega más objetos con la misma estructura
+];
+
+const carruselOpciones = document.querySelector('.carrusel-opciones');
+const carruselImagenes = document.querySelector('.carrusel-imagenes');
+const infoDiv = document.querySelector('.info');
+
+imagenes.forEach((imagen, index) => {
+  // Crear botón
+  const boton = document.createElement('button');
+  boton.innerText = `${imagen.Option}`;
+  boton.onclick = () => mostrarImagen(index);
+  carruselOpciones.appendChild(boton);
+
+  // Crear imagen
+  const img = document.createElement('img');
+  img.src = imagen.src;
+  carruselImagenes.appendChild(img);
+});
+
+function mostrarImagen(index) {
+  const imagenWidth = carruselImagenes.clientWidth ;
+  carruselImagenes.style.transform = `translateX(${-imagenWidth * index}px)`;
+  infoDiv.innerText = imagenes[index].info;
+}
+
+// Inicializar con la primera imagen
+mostrarImagen(0);
+</script>
+
+</body>
+</html>
